@@ -52,7 +52,7 @@ namespace The_Scorpion_Swamp
             AdventurerSingleton Hero = AdventurerSingleton.Instance;
             var fullHealth = Hero.Health;
             Hero.Attack(Hero);
-            Assert.AreEqual(fullHealth - 2, Hero.Health);
+            Assert.AreEqual(fullHealth - Hero.AttackDamage, Hero.Health);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace The_Scorpion_Swamp
         public override void Die()
         {
             base.Die();
-            GameConsole.SlowWrite("Удача явно не на твоей стороне.\nНа этом твое приключение окончено...");
+            GameConsole.SlowWrite("Luck wasn't on your side.\nYour journey ends here...");
         }
     }
 }
