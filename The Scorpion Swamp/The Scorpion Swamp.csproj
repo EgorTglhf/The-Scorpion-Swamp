@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventurerSingleton.cs" />
+    <Compile Include="AdventurerSingleton_Tests.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="GameConsole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

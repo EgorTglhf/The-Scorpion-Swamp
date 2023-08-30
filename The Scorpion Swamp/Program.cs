@@ -10,6 +10,16 @@ namespace The_Scorpion_Swamp
     {
         static void Main(string[] args)
         {
+            GameConsole.Welcome();
+
+            if (GameConsole.AskStartGame())
+            {
+                Console.Clear();
+                ////Create hero and locations
+                AdventurerSingleton Hero = AdventurerSingleton.Instance;
+            }
+
+            GameConsole.CloseGame();
         }
     }
 }
