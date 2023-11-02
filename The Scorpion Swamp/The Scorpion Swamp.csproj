@@ -53,7 +53,14 @@
     <Compile Include="AdventurerSingleton.cs" />
     <Compile Include="AdventurerSingleton_Tests.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="LocationFactory.cs" />
+    <Compile Include="LocationGlade.cs" />
+    <Compile Include="LocationSwamp.cs" />
+    <Compile Include="LocationThicket.cs" />
+    <Compile Include="Location_Tests.cs" />
+    <Compile Include="TypesOfLocation.cs" />
     <Compile Include="GameConsole.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
