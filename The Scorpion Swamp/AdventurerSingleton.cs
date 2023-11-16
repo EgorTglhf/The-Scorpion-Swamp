@@ -46,6 +46,17 @@ namespace The_Scorpion_Swamp
             return BASE_DEXTERITY + GameConsole.RollOfDice(1);
         }
 
+        public void Enter(Location location)
+        {
+            GameConsole.SlowWrite("You enter in a new location.");
+            location.ShowInfo();
+            GameConsole.SlowWrite("There is noone.");
+            if (IsAlive)
+            {
+                location.Effect(this);
+            }
+        }
+
         public override void Die()
         {
             base.Die();

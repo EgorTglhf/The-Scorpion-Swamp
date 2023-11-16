@@ -13,7 +13,7 @@ namespace The_Scorpion_Swamp
         //Delay before printing a symbol. х10 delay for carriage tranfer and ending.
         private const int TIMEOUT_ONE_SYMBOL_MS = 0;
         private const int TIMEOUT_CARRIAGE_TRANSFER_MS = TIMEOUT_ONE_SYMBOL_MS * 10;
-        private static Random rnd;
+        private static readonly Random rnd;
 
         static GameConsole()
         {

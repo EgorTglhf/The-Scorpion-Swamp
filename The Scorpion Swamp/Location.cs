@@ -6,7 +6,7 @@
 
         public TypeOfLocation Type { get; protected set; }
 
-        public Location NextLocation { get; protected set; }
+        public Location NextLocation { get; set; }
 
         virtual public void Effect(Character character) { }
 
