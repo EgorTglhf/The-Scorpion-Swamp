@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace The_Scorpion_Swamp
 {
     static internal class LocationFactory
     {
-        private static Random rnd;
+        private const double CHANCE_SWAMP = 0.40;
+        private const double CHANCE_THICKET = 0.35;
+        private const double CHANCE_GLADE = 1 - (CHANCE_SWAMP + CHANCE_THICKET);
 
-        private static readonly double chanceSwamp = 0.40;
-        private static readonly double chanceThicket = 0.35;
-        private static readonly double chanceGlade = 1 - (chanceSwamp + chanceThicket);
+        private static readonly Random rnd;
 
         static LocationFactory()
         {
@@ -23,11 +19,11 @@ namespace The_Scorpion_Swamp
         {
             double roll = rnd.NextDouble();
 
-            if (roll < chanceSwamp)
+            if (roll < CHANCE_SWAMP)
             {
                 return CreateSwamp();
             }
-            else if (roll < chanceSwamp + chanceThicket)
+            else if (roll < CHANCE_SWAMP + CHANCE_THICKET)
             {
                 return CreateThicket();
             }

@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace The_Scorpion_Swamp
+﻿namespace The_Scorpion_Swamp
 {
     static internal class Battle
     {
-        static public void Start(AdventurerSingleton hero, Enemy enemy)
+        static public void Start(Character character1, Character character2)
         {
-            GameConsole.SlowWrite($"Let the carnage begin! {hero.Name} и {enemy.Name}.");
-            while (hero.IsAlive && enemy.IsAlive)
+            GameConsole.SlowWrite($"Let the carnage begin! {character1.Name} и {character2.Name}.");
+            while (character1.IsAlive && character2.IsAlive)
             {
-                Round(hero, enemy);
+                Round(character1, character2);
             }
-            if (hero.IsAlive) GameConsole.SlowWrite("The battle is over..");
+            if (character1.IsAlive) GameConsole.SlowWrite("The battle is over..");
         }
 
-        static private void Round(AdventurerSingleton hero, Enemy enemy)
+        static private void Round(Character hero, Character enemy)
         {
 
             int heroStrentgh = hero.Dexterity + GameConsole.RollOfDice(2);
