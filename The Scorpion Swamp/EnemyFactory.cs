@@ -14,7 +14,7 @@ namespace The_Scorpion_Swamp
         private static readonly double chanceBear = 0.15;
         private static readonly double chanceBandit = 0.20;
         private static readonly double chanceOrc = 0.15;
-        private static readonly double chanceMinotaur = 0.5;
+        private static readonly double chanceMinotaur = 0.15;
         private static readonly double chanceClear = 1 - (chanceWolf + chanceBear + chanceBandit + chanceOrc + chanceMinotaur);
 
         static EnemyFactory()

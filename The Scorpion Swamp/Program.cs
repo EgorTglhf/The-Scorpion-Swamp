@@ -17,6 +17,25 @@ namespace The_Scorpion_Swamp
                 Console.Clear();
                 //Create hero and locations
                 AdventurerSingleton Hero = AdventurerSingleton.Instance;
+                LocationPath Path = LocationPathFactory.Create();
+
+                //Opening
+                GameConsole.StartGame();
+
+                while (Path.IsNextLocationExists && Hero.IsAlive)
+                {
+                    Hero.Enter(Path.GetNextLocation());
+                }
+
+                if (Hero.IsAlive)
+                {
+                    GameConsole.EndGoodMessage();
+                }
+                else
+                {
+                    GameConsole.EndBadMessage();
+                }
+                AdventurerSingleton.DeleteInstance();
             }
 
             GameConsole.CloseGame();

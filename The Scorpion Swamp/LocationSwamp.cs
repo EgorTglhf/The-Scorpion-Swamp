@@ -9,6 +9,11 @@
             Type = TypeOfLocation.Swamp;
         }
 
+        public LocationSwamp(Enemy enemy) : this()
+        {
+            SetEnemy(enemy);
+        }
+
         override public void Effect(Character character) 
         {
             GameConsole.SlowWrite("Swamp leeches bit you.");

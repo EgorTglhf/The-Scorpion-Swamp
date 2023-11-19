@@ -11,7 +11,7 @@ namespace The_Scorpion_Swamp
     static internal class GameConsole
     {
         //Delay before printing a symbol. х10 delay for carriage tranfer and ending.
-        private const int TIMEOUT_ONE_SYMBOL_MS = 0;
+        private const int TIMEOUT_ONE_SYMBOL_MS = 5;
         private const int TIMEOUT_CARRIAGE_TRANSFER_MS = TIMEOUT_ONE_SYMBOL_MS * 10;
         private static readonly Random rnd;
 
@@ -51,6 +51,27 @@ namespace The_Scorpion_Swamp
         {
             SlowWrite("For to close the game press Esc.");
             while (Console.ReadKey(true).Key != ConsoleKey.Escape) { }
+        }
+
+        public static void StartGame()
+        {
+            SlowWrite("Today is a great day for fishing!\n" +
+                "But alas, you've got an urgent task. You have to deliver the post to the nearest village.\n" +
+                "Unfortunately for you your way lies through Scorpion Swamp - a forgotten by God place,\n" +
+                "where dangerous creatures and misfits live.\n" +
+                "You go on your journey at your own risk.");
+        }
+
+        public static void EndGoodMessage()
+        {
+            SlowWrite("It was the last location!\n" +
+                "You finally come out of this damned swamp and see in front of you a small cute village where you were in such a hurry.\n" +
+                "Congratulations! This time luck is on your side! You won!");
+        }
+
+        public static void EndBadMessage()
+        {
+            SlowWrite("Game Over.");
         }
 
         public static int RollOfDice(int amountDice)

@@ -9,10 +9,18 @@
             Type = TypeOfLocation.Thicket;
         }
 
+        public LocationThicket(Enemy enemy) : this()
+        {
+            SetEnemy(enemy);
+        }
+
         override public void Effect(Character character)
         {
-            GameConsole.SlowWrite("Thickets are thick and scratch you.");
-            character.GetDamage(THICKET_ATTACK_DAMAGE);
+            if (EnemyOnLocation is null)
+            {
+                GameConsole.SlowWrite("Thickets are thick and scratch you.");
+                character.GetDamage(THICKET_ATTACK_DAMAGE);
+            }
         }
     }
 }

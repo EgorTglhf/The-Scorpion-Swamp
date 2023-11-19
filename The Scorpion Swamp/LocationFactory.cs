@@ -33,23 +33,19 @@ namespace The_Scorpion_Swamp
             }
             else
             {
-                return CreateThicket();
+                return CreateGlade();
             }
         }
 
-        public static LocationGlade CreateGlade()
-        {
-            return new LocationGlade();
-        }
+        public static LocationGlade CreateGlade() => new LocationGlade(GenerateEnemy());
 
-        public static LocationSwamp CreateSwamp()
-        {
-            return new LocationSwamp();
-        }
+        public static LocationSwamp CreateSwamp() => new LocationSwamp(GenerateEnemy());
 
-        public static LocationThicket CreateThicket()
+        public static LocationThicket CreateThicket() => new LocationThicket(GenerateEnemy());
+
+        public static Enemy GenerateEnemy()
         {
-            return new LocationThicket();
+            return EnemyFactory.CreateEnemy();
         }
     }
 }

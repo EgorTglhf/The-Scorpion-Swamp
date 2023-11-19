@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdventurerSingleton.cs" />
+    <Compile Include="Battle.cs" />
     <Compile Include="Tests\LocationPathFactory_Tests.cs" />
     <Compile Include="Tests\LocationPath_Tests.cs" />
     <Compile Include="Tests\AdventurerSingleton_Tests.cs" />

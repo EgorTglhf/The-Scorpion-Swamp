@@ -50,7 +50,14 @@ namespace The_Scorpion_Swamp
         {
             GameConsole.SlowWrite("You enter in a new location.");
             location.ShowInfo();
-            GameConsole.SlowWrite("There is noone.");
+            if (location.EnemyOnLocation is null)
+            {
+                GameConsole.SlowWrite("There is noone.");
+            }
+            else
+            {
+                Battle.Start(this, location.EnemyOnLocation);
+            }
             if (IsAlive)
             {
                 location.Effect(this);
